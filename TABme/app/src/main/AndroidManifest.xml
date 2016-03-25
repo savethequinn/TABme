@@ -17,6 +17,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".StartJoin"
             android:screenOrientation="portrait" />
@@ -31,6 +32,8 @@
             android:screenOrientation="portrait" />
         <activity android:name=".JoinTab" />
         <activity android:name=".StartTab"></activity>
+        <activity android:name=".EditTrans"></activity>
+
     </application>
 
 </manifest>

@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Add Transaction"
+        android:text="Edit Transaction"
         android:id="@+id/textView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
@@ -78,8 +78,8 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Complete Transaction"
-        android:id="@+id/CompleteButton"
+        android:text="Update Transaction"
+        android:id="@+id/UpdateButton"
         android:layout_below="@+id/ForEditText"
         android:layout_toEndOf="@+id/textView4"
         android:layout_marginTop="53dp" />
