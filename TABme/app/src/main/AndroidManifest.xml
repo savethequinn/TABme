@@ -15,7 +15,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+<<<<<<< HEAD
         <activity android:name=".StartJoin"></activity>
+=======
+        <activity android:name=".Login" />
+        <activity android:name=".Register" />
+        <activity android:name=".AddTrans"></activity>
+>>>>>>> origin/master
     </application>
 
 </manifest>
