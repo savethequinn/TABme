@@ -8,17 +8,29 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".StartJoin"></activity>
-        <activity android:name=".Login" />
-        <activity android:name=".Register" />
-        <activity android:name=".AddTrans"></activity>
+        <activity
+            android:name=".StartJoin"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Register"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AddTrans"
+            android:screenOrientation="portrait" />
+        <activity android:name=".JoinTab" />
+        <activity android:name=".StartTab"></activity>
     </application>
 
 </manifest>
