@@ -23,8 +23,8 @@ public class StartTab extends AppCompatActivity {
 
         //generate list
         ArrayList<String> list = new ArrayList<String>();
-        list.add("item1");
-        list.add("item2");
+        //list.add("item1");
+        //list.add("item2");
 
         //instantiate custom adapter
         MyCustomAdapter adapter = new MyCustomAdapter(list, this);
