@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-public class Login extends AppCompatActivity {
+public class Login extends AppCompatActivity implements View.OnClickListener {
 
     // define variables for the widgets
     private EditText UNeditText;
@@ -33,18 +33,19 @@ public class Login extends AppCompatActivity {
         RegisterButton = (Button) findViewById(R.id.RegisterButton);
 
         //set on click listeners
-//        LoginButton.setOnClickListener(this);
-//        RegisterButton.setOnClickListener(this);
+        LoginButton.setOnClickListener(this);
+        RegisterButton.setOnClickListener(this);
     }
 
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.LoginButton:
-                if (UNeditText.toString().equalsIgnoreCase("JDO589")||UNeditText.toString().equalsIgnoreCase("GV4353")&& PWeditText.toString().equals("cs329e"))
+                if (UNeditText.getText().toString().equals("cs329e") && PWeditText.getText().toString().equals("password"))
                 {
                     Toast.makeText(getApplicationContext(), "Login successful.", Toast.LENGTH_SHORT).show();
-                    //Intent intent = new Intent(this, HomeMenu.class);
-                    //startActivity(intent);
+                    Intent intent = new Intent(this, StartJoin.class);
+                    startActivity(intent);
                 }
                 else
                 {
