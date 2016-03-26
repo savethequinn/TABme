@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:background="@color/colorPrimary">
+
+<ListView android:layout_width="300dp"
+    android:layout_height="150dp"
+    android:id="@+id/mainListView"
+    android:fastScrollEnabled="true"
+    android:fastScrollAlwaysVisible="false"
+    android:layout_marginTop="25dp"
+    android:layout_below="@+id/splitHeader"
+    android:layout_centerHorizontal="true">
+</ListView>
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:text="Split Tab With:"
+    android:id="@+id/splitHeader"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="60dp" />
+
+    <ListView
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:id="@+id/transactionListView"
+        android:fastScrollEnabled="true"
+        android:fastScrollAlwaysVisible="false"
+        android:layout_marginTop="350dp"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Transaction List:"
+        android:id="@+id/textView13"
+        android:layout_marginTop="310dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD TRANSACTION"
+        android:id="@+id/btnAddTran"
+        android:layout_below="@+id/transactionListView"
+        android:layout_alignEnd="@+id/textView13" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD USER"
+        android:id="@+id/btnAddUser"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>
