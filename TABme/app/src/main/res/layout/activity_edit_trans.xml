@@ -81,7 +81,16 @@
         android:text="Update Transaction"
         android:id="@+id/UpdateButton"
         android:layout_below="@+id/ForEditText"
-        android:layout_toEndOf="@+id/textView4"
-        android:layout_marginTop="53dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="DELETE"
+        android:id="@+id/DeleteButton"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#ff5d5d" />
 
 </RelativeLayout>
