@@ -27,6 +27,7 @@ public class StartTab extends Activity {
     private ArrayAdapter<String> listAdapter ;
     private Button btnAddUser ;
     private Button btnAddTran ;
+    private Button btnTabOut ;
 
     //variables for the dialog
     private EditText inputAddUser ;
@@ -39,6 +40,16 @@ public class StartTab extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
+
+        //tabout out button
+        btnTabOut = (Button) findViewById(R.id.btnTabOut);
+        btnTabOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(StartTab.this, CompleteTab.class));
+            }
+        });
+
 
         //BEGIN USER LIST
         // Find the ListView resource.
