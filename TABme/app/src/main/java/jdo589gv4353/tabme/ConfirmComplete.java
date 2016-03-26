@@ -32,6 +32,7 @@ public class ConfirmComplete extends AppCompatActivity implements View.OnClickLi
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.NoButton:
+                Toast.makeText(getApplicationContext(), "Thanks for using TABme!", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(this, StartJoin.class);
                 startActivity(intent);
                 break;

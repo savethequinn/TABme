@@ -49,7 +49,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 }
                 else
                 {
-                    Toast.makeText(getApplicationContext(), "Login NOT successfull.", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Login NOT successful.", Toast.LENGTH_SHORT).show();
                 }
                 break;
             case R.id.RegisterButton:
