@@ -16,12 +16,6 @@ public class StartJoin extends AppCompatActivity {
         Button btnJoinTab = (Button) findViewById(R.id.btnJoinTab);
         Button btnStartTab = (Button) findViewById(R.id.btnStartTab);
 
-        btnJoinTab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(StartJoin.this, JoinTab.class));
-            }
-        });
 
         btnStartTab.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -18,7 +18,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="EDIT TRANSACTIONS"
+        android:text="ADD/EDIT TRANSACTIONS"
         android:id="@+id/btnAddTran"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
