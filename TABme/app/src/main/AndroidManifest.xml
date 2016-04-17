@@ -20,9 +20,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".StartJoin"
-            android:screenOrientation="portrait" />
-        <activity
             android:name=".Login"
             android:screenOrientation="portrait" />
         <activity
@@ -31,12 +28,10 @@
         <activity
             android:name=".AddTrans"
             android:screenOrientation="portrait" />
-        <activity android:name=".JoinTab" />
         <activity android:name=".StartTab" />
         <activity android:name=".EditTrans" />
         <activity android:name=".AddUser" />
         <activity android:name=".CompleteTab" />
-        <activity android:name=".ConfirmComplete"></activity>
     </application>
 
 </manifest>

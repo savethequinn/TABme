@@ -10,7 +10,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
 
         <TextView
             android:id="@+id/textView1"
@@ -19,14 +20,16 @@
             android:text="Enter the user's phone number:"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textAlignment="center"
-            android:textColor="#ffffff" />
+            android:textColor="@color/colorAccent3" />
 
         <EditText
             android:id="@+id/editTextDialogUserInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text|number"
-            android:textColor="#ffffff">
+            android:textColor="@color/colorAccent3"
+            android:phoneNumber="true"
+            android:singleLine="true">
             <requestFocus />
 
         </EditText>

@@ -5,40 +5,66 @@
     android:layout_height="fill_parent"
     android:background="@color/colorPrimary">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Current Transactions:"
-        android:id="@+id/splitHeader"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="EDIT TRANSACTIONS"
-        android:id="@+id/btnAddTran"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Current Transactions:"
+            android:id="@+id/splitHeader"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textColor="@color/colorPrimary"
+            android:background="@color/colorAccent3" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TAB OUT"
-        android:id="@+id/btnTabOut"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scrollView3"
+            android:textAlignment="center">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/transactionList"
-        android:layout_below="@+id/splitHeader"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        />
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="This area will be filled will details of your current tab."
+                android:id="@+id/transactionList"
+                android:layout_below="@+id/splitHeader"
+                android:layout_centerHorizontal="true"
+                android:padding="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="17dp" />
+        </ScrollView>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="EDIT TRANSACTIONS"
+            android:id="@+id/btnAddTran"
+            android:background="@drawable/roundedbutton"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp" />
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="TabMe Out!"
+            android:id="@+id/btnTabOut"
+            android:background="@drawable/roundedbutton"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="false"
+            android:padding="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20dp" />
+    </LinearLayout>
 
 </RelativeLayout>

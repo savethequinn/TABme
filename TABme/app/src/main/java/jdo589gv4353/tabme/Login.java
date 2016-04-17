@@ -50,7 +50,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 {
                     setUserInfoVar(TabMeDB.getUserData(UNeditText.getText().toString()));
                     Toast.makeText(getApplicationContext(), "Login successful.", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(this, StartJoin.class);
+                    Intent intent = new Intent(this, StartTab.class);
                     startActivity(intent);
                     break;
                 }

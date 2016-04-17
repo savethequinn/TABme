@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.app.Application;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -35,6 +36,7 @@ public class StartTab extends Activity {
     private Button btnTabOut ;
     private Button btnViewAll;
     private TextView transactionList;
+    private TextView splitHeader;
 
     //variables for the dialog
     private EditText inputAddUser ;
@@ -68,6 +70,12 @@ public class StartTab extends Activity {
             }
         });
         viewAll();
+
+        splitHeader = (TextView) findViewById(R.id.splitHeader);
+        String headerText = "Current Tab for ";
+        String FN = ((AppContext) this.getApplication()).getUserFirst();
+        headerText = headerText + FN + ":";
+        splitHeader.setText(headerText);
     }
 
     @Override
@@ -87,7 +95,7 @@ public class StartTab extends Activity {
         Cursor res = myDb.getAllData();
         if (res.getCount() == 0) {
             // write message
-            String data = "No Transactions";
+            String data = "There are currently no transactions.";
             transactionList.setText(data);
             return;
         }
@@ -96,7 +104,7 @@ public class StartTab extends Activity {
             buffer.append("Transaction ID: " + res.getString(0) + "\n");
             buffer.append("Cost: " + res.getString(1) + "\n");
             buffer.append("Item: " + res.getString(2) + "\n");
-            buffer.append("Payer: " + res.getString(3) + "\n");
+            buffer.append("Payer: " + res.getString(3) + "\n\n");
         }
 
         String data = buffer.toString();
