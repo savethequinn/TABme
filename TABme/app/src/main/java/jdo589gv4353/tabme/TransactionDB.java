@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class TransactionDB extends SQLiteOpenHelper {
     // declare the DB name here
-    public static final String DATABASE_NAME = "TabMe.db";
+    public static final String DATABASE_NAME = "Transaction.db";
 
     // now declare the TABLE name that will be part of the DB
     public static final String TABLE_NAME = "Transactions";

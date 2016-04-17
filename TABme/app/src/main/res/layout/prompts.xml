@@ -4,7 +4,8 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:padding="10dp" >
+    android:padding="10dp"
+    android:background="@color/colorPrimary">
 
     <LinearLayout
         android:orientation="vertical"
@@ -17,13 +18,15 @@
             android:layout_height="wrap_content"
             android:text="Enter the user's phone number:"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textAlignment="center" />
+            android:textAlignment="center"
+            android:textColor="#ffffff" />
 
         <EditText
             android:id="@+id/editTextDialogUserInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="text|number">
+            android:inputType="text|number"
+            android:textColor="#ffffff">
             <requestFocus />
 
         </EditText>
