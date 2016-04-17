@@ -42,19 +42,30 @@ public class AddTrans extends AppCompatActivity {
         DeleteData();
     }
 
+    public boolean checkEntry() {
+        if (editCost.getText().toString().length() <= 0 || editItem.toString().length() <= 0 || editPayer.toString().length() <= 0 ) {
+            Toast.makeText(AddTrans.this, "Data NOT Inserted", Toast.LENGTH_LONG).show();
+            return false;
+        }
+        return true;
+    }
+
     // this section listens for the "Add Data" button event and inserts into the DB
     // must convert to String in order to input into the DB
     public void AddData() {
+
         buttonAddData.setOnClickListener(
                 new View.OnClickListener() {
                     public void onClick(View v) {
-                        float editCostfloat = Float.parseFloat(editCost.getText().toString());
-                        boolean isInserted = myDb.insertData(editCostfloat, editItem.getText().toString(), editPayer.getText().toString());
-                        if (isInserted == true)
-                            Toast.makeText(AddTrans.this, "Data Inserted", Toast.LENGTH_LONG).show();
-                        else
-                            Toast.makeText(AddTrans.this, "Data NOT Inserted", Toast.LENGTH_LONG).show();
-                        finish();
+                        if (checkEntry()) {
+                            float editCostfloat = Float.parseFloat(editCost.getText().toString());
+                            boolean isInserted = myDb.insertData(editCostfloat, editItem.getText().toString(), editPayer.getText().toString());
+                            if (isInserted)
+                                Toast.makeText(AddTrans.this, "Data Inserted", Toast.LENGTH_LONG).show();
+                            else
+                                Toast.makeText(AddTrans.this, "Data NOT Inserted", Toast.LENGTH_LONG).show();
+                            finish();
+                        }
                     }
 
                 }
