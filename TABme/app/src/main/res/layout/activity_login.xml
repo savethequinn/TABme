@@ -59,7 +59,8 @@
         android:id="@+id/LoginButton"
         android:layout_marginBottom="54dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/PWeditText" />
+        android:layout_alignStart="@+id/PWeditText"
+        android:background="@drawable/roundedbutton"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -67,7 +68,8 @@
         android:text="Register"
         android:id="@+id/RegisterButton"
         android:layout_alignTop="@+id/LoginButton"
-        android:layout_alignEnd="@+id/PWeditText" />
+        android:layout_alignEnd="@+id/PWeditText"
+        android:background="@drawable/roundedbutton"/>
 
     <TextView
         android:layout_width="wrap_content"
