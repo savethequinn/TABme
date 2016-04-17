@@ -23,7 +23,7 @@ public class AddTrans extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_add_trans);
 
         // this will call the constructor of the DatabaseHelper class which will create the DB
         myDb = new TransactionDB(this);
@@ -35,12 +35,10 @@ public class AddTrans extends AppCompatActivity {
         editTextId = (EditText)findViewById(R.id.editText_ID);
 
         buttonAddData = (Button)findViewById(R.id.button_data);
-        updateButton = (Button)findViewById(R.id.buttonUpdate);
         deleteButton = (Button)findViewById(R.id.buttonDelete);
 
         // in the onCreate of the Main Activity, call all of the methods needed to manage the DB
         AddData();
-        updateData();
         DeleteData();
     }
 
@@ -56,6 +54,7 @@ public class AddTrans extends AppCompatActivity {
                             Toast.makeText(AddTrans.this, "Data Inserted", Toast.LENGTH_LONG).show();
                         else
                             Toast.makeText(AddTrans.this, "Data NOT Inserted", Toast.LENGTH_LONG).show();
+                        finish();
                     }
 
                 }
@@ -71,28 +70,14 @@ public class AddTrans extends AppCompatActivity {
                             Toast.makeText(AddTrans.this, "Data Deleted", Toast.LENGTH_LONG).show();
                         else
                             Toast.makeText(AddTrans.this, "Data NOT Deleted", Toast.LENGTH_LONG).show();
+                        finish();
                     }
 
                 }
         );
     }
 
-    // this listens for the "update" button on the GUI to update the DB based on ID entered
-    public void updateData() {
-        updateButton.setOnClickListener(
-                new View.OnClickListener() {
-                    public void onClick(View v) {
-                        float editCostfloat = Float.parseFloat(editCost.getText().toString());
-                        boolean isUpdated = myDb.updateData(editTextId.getText().toString(), editCostfloat, editItem.getText().toString(), editPayer.getText().toString());
-                        if (isUpdated == true)
-                            Toast.makeText(AddTrans.this, "Data Updated", Toast.LENGTH_LONG).show();
-                        else
-                            Toast.makeText(AddTrans.this, "Data NOT Updated", Toast.LENGTH_LONG).show();
-                    }
 
-                }
-        );
-    }
 
     // this method uses the AlertDialog method to create the data
     // Creates a builder for an alert dialog that uses the default alert dialog theme.

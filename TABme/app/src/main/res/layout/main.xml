@@ -1,69 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-android:orientation="vertical"
-android:layout_width="fill_parent"
-android:layout_height="fill_parent"
-android:background="@color/colorPrimary">
-
-<ListView android:layout_width="300dp"
-    android:layout_height="150dp"
-    android:id="@+id/mainListView"
-    android:fastScrollEnabled="true"
-    android:fastScrollAlwaysVisible="false"
-    android:layout_marginTop="25dp"
-    android:layout_below="@+id/splitHeader"
-    android:layout_centerHorizontal="true">
-</ListView>
-
-<TextView
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:textAppearance="?android:attr/textAppearanceLarge"
-    android:text="Split Tab With:"
-    android:id="@+id/splitHeader"
-    android:layout_alignParentTop="true"
-    android:layout_alignStart="@+id/btnAddTran" />
-
-    <ListView
-        android:layout_width="300dp"
-        android:layout_height="150dp"
-        android:id="@+id/transactionListView"
-        android:fastScrollEnabled="true"
-        android:fastScrollAlwaysVisible="false"
-        android:layout_below="@+id/textView13"
-        android:layout_alignStart="@+id/mainListView" />
-
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
     <TextView
+        android:id="@+id/tvBody"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Transaction List:"
-        android:id="@+id/textView13"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
+        android:text="Study cursors"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/tvPriority"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ADD TRANSACTION"
-        android:id="@+id/btnAddTran"
-        android:layout_below="@+id/transactionListView"
-        android:layout_alignEnd="@+id/textView13" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADD USER"
-        android:id="@+id/btnAddUser"
-        android:layout_below="@+id/mainListView"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TAB OUT"
-        android:id="@+id/btnTabOut"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-</RelativeLayout>
+        android:layout_marginLeft="10dp"
+        android:text="3"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+</LinearLayout>
