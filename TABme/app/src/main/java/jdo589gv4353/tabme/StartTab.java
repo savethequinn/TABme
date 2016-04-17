@@ -79,49 +79,54 @@ public class StartTab extends Activity {
         });
 
         btnAddTran = (Button) findViewById(R.id.btnAddTran);
-        //inputAddUser = (EditText) findViewById(R.id.addUserInput);
-
         btnAddTran.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //do something
-                //Toast.makeText(getApplicationContext(), "Add a user", Toast.LENGTH_SHORT).show()
-                //get prompts.xml view
-                LayoutInflater li = LayoutInflater.from(context);
-                View promptsView = li.inflate(R.layout.prompts, null);
-
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-
-                //set prompts.xml to alertdialog builder
-                alertDialogBuilder.setView(promptsView);
-
-                final EditText userInput = (EditText) promptsView
-                        .findViewById(R.id.editTextDialogUserInput);
-
-                alertDialogBuilder
-                        .setCancelable(false)
-                        .setPositiveButton("ADD",
-                                new DialogInterface.OnClickListener(){
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        m_text = userInput.getText().toString();
-                                        listAdapter.add(m_text);
-                                    }
-                                })
-                        .setNegativeButton("Cancel",
-                                new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog,int id) {
-                                        dialog.cancel();
-                                    }
-                                });
-                //create alert dialog
-                AlertDialog alertDialog = alertDialogBuilder.create();
-
-                //show it
-                alertDialog.show();
-
-
+                startActivity(new Intent(StartTab.this, AddTrans.class));
             }
         });
+
+//        btnAddTran.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                //do something
+//                //Toast.makeText(getApplicationContext(), "Add a user", Toast.LENGTH_SHORT).show()
+//                //get prompts.xml view
+//                LayoutInflater li = LayoutInflater.from(context);
+//                View promptsView = li.inflate(R.layout.prompts, null);
+//
+//                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
+//
+//                //set prompts.xml to alertdialog builder
+//                alertDialogBuilder.setView(promptsView);
+//
+//                final EditText userInput = (EditText) promptsView
+//                        .findViewById(R.id.editTextDialogUserInput);
+//
+//                alertDialogBuilder
+//                        .setCancelable(false)
+//                        .setPositiveButton("ADD",
+//                                new DialogInterface.OnClickListener(){
+//                                    public void onClick(DialogInterface dialog, int id) {
+//                                        m_text = userInput.getText().toString();
+//                                        listAdapter.add(m_text);
+//                                    }
+//                                })
+//                        .setNegativeButton("Cancel",
+//                                new DialogInterface.OnClickListener() {
+//                                    public void onClick(DialogInterface dialog,int id) {
+//                                        dialog.cancel();
+//                                    }
+//                                });
+//                //create alert dialog
+//                AlertDialog alertDialog = alertDialogBuilder.create();
+//
+//                //show it
+//                alertDialog.show();
+//
+//
+//            }
+//        });
 
 
         //BEGIN SECTION IS FOR THE TRANSACTIONS

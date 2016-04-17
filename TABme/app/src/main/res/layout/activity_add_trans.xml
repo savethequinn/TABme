@@ -14,75 +14,88 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Add Transaction"
-        android:id="@+id/textView"
+        android:text="Cost"
+        android:id="@+id/textView_name"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Who&apos;s paying?"
-        android:id="@+id/textView2"
-        android:layout_marginTop="35dp"
-        android:layout_below="@+id/textView"
         android:layout_alignParentStart="true" />
 
-    <Spinner
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/PayeeSpinner"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="17dp" />
+        android:id="@+id/editText"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView_name" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Total bill amount?"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/PayeeSpinner"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="18dp" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Item"
+        android:id="@+id/textView_surname"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
-        android:id="@+id/BillTotalEditText"
-        android:layout_below="@+id/textView3"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/ForEditText" />
+        android:id="@+id/editText2"
+        android:layout_alignTop="@+id/textView_surname"
+        android:layout_toEndOf="@+id/textView_surname" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="What for?"
-        android:id="@+id/textView4"
-        android:layout_below="@+id/BillTotalEditText"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="23dp" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Payer"
+        android:id="@+id/textView_marks"
+        android:layout_below="@+id/editText2"
+        android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ForEditText"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/PayeeSpinner" />
+        android:id="@+id/editText3"
+        android:layout_below="@+id/editText2"
+        android:layout_toEndOf="@+id/textView_marks" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Complete Transaction"
-        android:id="@+id/CompleteButton"
-        android:layout_below="@+id/ForEditText"
-        android:layout_toEndOf="@+id/textView4"
-        android:layout_marginTop="53dp" />
+        android:text="add data"
+        android:id="@+id/button_data"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="update"
+        android:id="@+id/buttonUpdate"
+        android:layout_centerVertical="true"
+        android:layout_alignEnd="@+id/editText_ID" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="ID"
+        android:id="@+id/textViewID"
+        android:layout_below="@+id/editText3"
+        android:layout_alignEnd="@+id/viewAllData" />
+
+    <EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editText_ID"
+        android:layout_below="@+id/editText3"
+        android:layout_toEndOf="@+id/textView_name" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="delete"
+        android:id="@+id/buttonDelete"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
