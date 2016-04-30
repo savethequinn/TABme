@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="jdo589gv4353.tabme">
-
+    <uses-permission android:name="android.permission.SEND_SMS"/>
     <application
-        android:name="AppContext"
+        android:name=".AppContext"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".MainActivity"
+            android:theme="@style/AppTheme"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,18 +20,41 @@
             </intent-filter>
         </activity>
         <activity
+            android:theme="@style/AppTheme"
             android:name=".Login"
             android:screenOrientation="portrait" />
+
         <activity
+            android:theme="@style/AppTheme"
             android:name=".Register"
             android:screenOrientation="portrait" />
         <activity
+            android:theme="@style/AppTheme"
             android:name=".AddTrans"
             android:screenOrientation="portrait" />
-        <activity android:name=".StartTab" />
-        <activity android:name=".EditTrans" />
-        <activity android:name=".AddUser" />
-        <activity android:name=".CompleteTab" />
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".StartTab"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".EditTrans"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".AddUser"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".CompleteTab"
+            android:screenOrientation="portrait" />
+        <activity
+            android:theme="@style/AppTheme"
+            android:name=".StartJoin"
+            android:screenOrientation="portrait" />
+        <activity android:name=".FinalStep"
+            android:theme="@style/AppTheme"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

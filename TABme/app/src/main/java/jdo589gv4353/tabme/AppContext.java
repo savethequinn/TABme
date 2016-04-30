@@ -1,6 +1,9 @@
 package jdo589gv4353.tabme;
 
 import android.app.Application;
+
+import java.util.List;
+
 /**
  * Created by Justin on 4/16/2016.
  */
@@ -55,6 +58,26 @@ public class AppContext extends Application {
 
     public void setUserName(String UserName) {
         this.UserName = UserName;
+    }
+
+    private List<String> Numbers;
+
+    public List<String> getNumbers(){
+        return Numbers;
+    }
+
+    public void setNumbers(List<String> Numbers) {
+        this.Numbers = Numbers;
+    }
+
+    private String TextContent;
+
+    public String getTextContent(){
+        return TextContent;
+    }
+
+    public void setTextContent(String TextContent) {
+        this.TextContent = TextContent;
     }
 
 }

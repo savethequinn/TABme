@@ -14,7 +14,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
     // create an instance of the DatabaseHelper class here
     DBHelper TabMeDB;
-
+    TransactionDB TransDB;
     // define variables for the widgets
     private EditText UNeditText, PWeditText;
     private Button LoginButton, RegisterButton;
@@ -30,6 +30,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         // this will call the constructor of the DatabaseHelper class
         TabMeDB = new DBHelper(this);
+        TransDB = new TransactionDB(this);
 
         // get references to the widgets
         UNeditText = (EditText) findViewById(R.id.UNeditText);
@@ -48,10 +49,17 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
             case R.id.LoginButton:
                 if (TabMeDB.checkLogin(UNeditText.getText().toString(), PWeditText.getText().toString()))
                 {
+                    Cursor res = TransDB.getAllData();
                     setUserInfoVar(TabMeDB.getUserData(UNeditText.getText().toString()));
+                    if(!res.moveToFirst()){
+                        Intent intent = new Intent(this, StartJoin.class);
+                        startActivity(intent);
+                    }
+                    else{
+                        Intent intent = new Intent(this, StartTab.class);
+                        startActivity(intent);
+                    }
                     Toast.makeText(getApplicationContext(), "Login successful.", Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(this, StartTab.class);
-                    startActivity(intent);
                     break;
                 }
                 else

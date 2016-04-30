@@ -43,10 +43,13 @@ public class AddTrans extends AppCompatActivity {
     }
 
     public boolean checkEntry() {
-        if (editCost.getText().toString().length() <= 0 || editItem.toString().length() <= 0 || editPayer.toString().length() <= 0 ) {
-            Toast.makeText(AddTrans.this, "Data NOT Inserted", Toast.LENGTH_LONG).show();
+        if (editCost.getText().toString().equals("") || editItem.toString().equals("") || editPayer.toString().equals("")) {
+            Toast.makeText(AddTrans.this, "Make sure to fill out all fields in the correct format. Try again!", Toast.LENGTH_LONG).show();
             return false;
         }
+//        if (!editCost.getText().toString().contains(".")){
+//            return false;
+//        }
         return true;
     }
 
@@ -60,10 +63,10 @@ public class AddTrans extends AppCompatActivity {
                         if (checkEntry()) {
                             float editCostfloat = Float.parseFloat(editCost.getText().toString());
                             boolean isInserted = myDb.insertData(editCostfloat, editItem.getText().toString(), editPayer.getText().toString());
-                            if (isInserted)
-                                Toast.makeText(AddTrans.this, "Data Inserted", Toast.LENGTH_LONG).show();
-                            else
-                                Toast.makeText(AddTrans.this, "Data NOT Inserted", Toast.LENGTH_LONG).show();
+//                            if (isInserted)
+//                                Toast.makeText(AddTrans.this, "Data Inserted", Toast.LENGTH_LONG).show();
+//                            else
+//                                Toast.makeText(AddTrans.this, "Data NOT Inserted", Toast.LENGTH_LONG).show();
                             finish();
                         }
                     }
@@ -77,10 +80,10 @@ public class AddTrans extends AppCompatActivity {
                 new View.OnClickListener() {
                     public void onClick(View v) {
                         Integer deletedRows = myDb.deleteData(editTextId.getText().toString());
-                        if (deletedRows > 0)
-                            Toast.makeText(AddTrans.this, "Data Deleted", Toast.LENGTH_LONG).show();
-                        else
-                            Toast.makeText(AddTrans.this, "Data NOT Deleted", Toast.LENGTH_LONG).show();
+//                        if (deletedRows > 0)
+//                            Toast.makeText(AddTrans.this, "Data Deleted", Toast.LENGTH_LONG).show();
+//                        else
+//                            Toast.makeText(AddTrans.this, "Data NOT Deleted", Toast.LENGTH_LONG).show();
                         finish();
                     }
 

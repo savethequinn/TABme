@@ -50,7 +50,8 @@
             android:textAlignment="center"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="17dp"
-            android:padding="10dp" />
+            android:padding="10dp"
+            android:theme="@style/App_EditTextStyle" />
 
         <Button
             android:layout_width="fill_parent"

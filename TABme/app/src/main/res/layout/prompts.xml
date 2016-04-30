@@ -17,19 +17,22 @@
             android:id="@+id/textView1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enter the user's phone number:"
+            android:text="Enter the user&apos;s 10-digit phone number:"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textAlignment="center"
-            android:textColor="@color/colorAccent3" />
+            android:textColor="@color/colorAccent3"
+            android:textSize="20dp" />
 
         <EditText
             android:id="@+id/editTextDialogUserInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text|number"
-            android:textColor="@color/colorAccent3"
+            android:textColor="@color/colorPrimaryDark"
             android:phoneNumber="true"
-            android:singleLine="true">
+            android:singleLine="true"
+            android:textSize="20dp"
+            android:theme="@style/App_EditTextStyle">
             <requestFocus />
 
         </EditText>

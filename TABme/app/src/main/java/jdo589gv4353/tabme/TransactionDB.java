@@ -90,20 +90,58 @@ public class TransactionDB extends SQLiteOpenHelper {
         return cursor;
     }
 
-    public boolean updateData(String Id, Float COST, String ITEM, String PAYER){
+    public boolean updateData(String Id, Float COST, String ITEM, String PAYER) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(COL_1, Id);
         contentValues.put(COL_2, COST);
         contentValues.put(COL_3, ITEM);
         contentValues.put(COL_4, PAYER);
-        db.update(TABLE_NAME, contentValues, "id = ?", new String[] {Id});
+        db.update(TABLE_NAME, contentValues, "id = ?", new String[]{Id});
         return true;
+    }
+
+    public Boolean CheckEmpty() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("select * from " + TABLE_NAME, null);
+        if (!res.moveToFirst()) {
+            // write message
+            return true;
+        }
+        return false;
     }
 
     public Integer deleteData(String Id) {
         SQLiteDatabase db = this.getWritableDatabase();
-        return db.delete(TABLE_NAME, "ID = ?", new String[] {Id});
+        return db.delete(TABLE_NAME, "ID = ?", new String[]{Id});
+    }
+
+    public Cursor getAverageCost() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        //aggregate costs
+        Cursor aggCosts = db.rawQuery("SELECT SUM(cost) AS SUMCOST FROM Transactions GROUP BY UPPER(payer)", null);
+        if (aggCosts.moveToFirst()) {
+            Cursor res = db.rawQuery("SELECT AVG(SUMCOST) FROM (SELECT SUM(cost) AS SUMCOST FROM Transactions GROUP BY UPPER(payer))", null);
+            return res;
+        }
+        return aggCosts;
+    }
+
+    public Cursor getOwed(Float avg) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor res = db.rawQuery("SELECT SUM(cost) AS SUM, UPPER(payer) AS NAME FROM Transactions GROUP BY UPPER(payer)", null);
+        if (res.moveToFirst()) {
+            Cursor res2 = db.rawQuery("SELECT NAME, (SUM-" + avg + ") AS OWES FROM (SELECT SUM(cost) AS SUM, UPPER(payer) AS NAME FROM Transactions GROUP BY UPPER(payer))", null);
+            return res2;
+        }
+        return res;
+    }
+
+    public void deleteTable(String name) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("DELETE FROM " + name);
+        db.close();
     }
 }
+
 

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jdo589gv4353.tabme.FinalStep">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout4">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="TabME Out!"
+            android:id="@+id/splitHeader4"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textColor="@color/colorPrimary"
+            android:background="@color/colorAccent3"
+            android:layout_marginBottom="10dp" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView4"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentStart="true"
+        android:padding="10dp">
+
+        <!--<TextView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="This area will be filled will details of your current tab. Click &apos;Add Transaction&apos; below to enter your first transaction!"-->
+        <!--android:id="@+id/transactionList"-->
+        <!--android:padding="10dp"-->
+        <!--android:textAlignment="center"-->
+        <!--android:textColor="@color/colorPrimaryDark"-->
+        <!--android:textSize="17dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="TxtContent"
+            android:id="@+id/TxtContent"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textIsSelectable="false"
+            android:textColor="@color/colorPrimaryDark" />
+    </ScrollView>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Complete Tab"
+        android:id="@+id/compTabBtn"
+        android:background="@drawable/roundedbutton"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+</RelativeLayout>
